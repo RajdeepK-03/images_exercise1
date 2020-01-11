@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imgView.image = imgArray[0]
     
     }
 
@@ -37,9 +38,9 @@ class ViewController: UIViewController {
          if (index < imgArray.count)
            {
              index = index - 1
-             if (index == imgArray.count)
+             if (index <= 0)
              {
-               index = 0
+                index = imgArray.count-1
              }
              imgView.image = imgArray[index]
            }
